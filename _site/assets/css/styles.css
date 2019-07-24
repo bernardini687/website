@@ -1,2 +1,13 @@
 .current-item {
   color: green; }
+
+body {
+  min-height: 100vh;
+  margin: 0; }
+
+header {
+  padding: 10vh;
+  text-align: center; }
+
+section {
+  padding: 5vh 10vw; }
