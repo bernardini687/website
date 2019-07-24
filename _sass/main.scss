@@ -2,16 +2,45 @@
   color: green;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
+  max-width: 697px;
   min-height: 100vh;
-  margin: 0;
+  margin: 0 auto;
 }
 
 header {
-  padding: 10vh;
+  padding: 10vh 10vw;
   text-align: center;
 }
 
 section {
-  padding: 5vh 10vw;
+  padding: 5vh 69.7px;
+}
+
+article {
+  padding: 36.4px;
+}
+
+@media only screen and (max-width: 663px) {
+  html {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 5vh 10vw;
+  }
+}
+
+@media only screen and (max-width: 363px) {
+  html {
+    font-size: 16px;
+  }
+
+  article {
+    padding: 36.4px 0;
+  }
 }
