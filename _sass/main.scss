@@ -2,8 +2,13 @@
   color: green;
 }
 
+li {
+  list-style: none;
+}
+
 html {
   font-size: 20px;
+  line-height: 30px;
 }
 
 body {
@@ -28,6 +33,7 @@ article {
 @media only screen and (max-width: 663px) {
   html {
     font-size: 18px;
+    line-height: 27px;
   }
 
   section {
@@ -38,6 +44,7 @@ article {
 @media only screen and (max-width: 363px) {
   html {
     font-size: 16px;
+    line-height: 24px;
   }
 
   article {

@@ -1,6 +1,4 @@
 ---
 title: about
 ---
-# About page
-
-You know what this is.
+# You know what this is.

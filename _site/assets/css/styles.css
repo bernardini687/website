@@ -1,8 +1,12 @@
 .current-item {
   color: green; }
 
+li {
+  list-style: none; }
+
 html {
-  font-size: 20px; }
+  font-size: 20px;
+  line-height: 30px; }
 
 body {
   max-width: 697px;
@@ -21,13 +25,15 @@ article {
 
 @media only screen and (max-width: 663px) {
   html {
-    font-size: 18px; }
+    font-size: 18px;
+    line-height: 27px; }
 
   section {
     padding: 5vh 10vw; } }
 @media only screen and (max-width: 363px) {
   html {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 24px; }
 
   article {
     padding: 36.4px 0; } }
