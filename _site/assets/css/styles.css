@@ -1,10 +1,27 @@
-.current-item {
-  color: green; }
+.color-dark {
+  color: #123; }
+
+.color-light {
+  color: #abc; }
+
+.font-light {
+  font-weight: lighter; }
 
 li {
   list-style: none; }
 
+a {
+  text-decoration: none;
+  color: #89a; }
+  a:hover {
+    color: #abc; }
+
+h1, h2, h3, h4, h5, h6, nav, .sans {
+  font-family: sans-serif; }
+
 html {
+  background-color: #fffefa;
+  color: #123;
   font-size: 20px;
   line-height: 30px; }
 

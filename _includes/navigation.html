@@ -2,7 +2,7 @@
   {% for item in site.data.navigation %}
     <a href="{{ item.link }}"
       {% if page.url == item.link %}
-        class="current-item"
+        class="color-dark"
       {% endif %}>
       {{ item.name }}</a>
   {% endfor %}

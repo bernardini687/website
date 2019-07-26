@@ -18,5 +18,3 @@ All-in mode, on. January 28th arrived quickly and the bootcamp begun. There's a 
 In such an environment, I felt empowered and supported. The momentum I cultivated in the preceding months simply spiked to levels I never dreamt of. I grew really passionate about programming because the staff there was capable of communicating the whole picture of what programming is about: a whole community of generous humans, sharing knowledge that's not only useful for being effective in the job but, really, in life. Programming is all about the mindset, and good mindset equals good life, I guess?
 
 Dealing with frustration, solving problems, embracing patience and humility, being mindful and knowing when to take a break, learning how to learn and enjoying the process. All of these and a lot more are surprisingly related to programming, and with that being said, I ain't going anywhere else. This is where I belong.
-
-
