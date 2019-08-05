@@ -91,3 +91,12 @@ p, ul, ol, pre, table, blockquote {
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0rem;
   margin-bottom: 0rem; }
+
+pre {
+  overflow: scroll;
+  background-color: #f3f3f3;
+  padding: 1.5rem; }
+
+code {
+  font-size: .8rem;
+  line-height: 1; }
