@@ -1,4 +1,4 @@
-body { background-color: #fffaf7; font-family: Helvetica, sans-serif; line-height: 1.3; }
+body { background-color: #fffaf7; color: #333; font-family: Helvetica, sans-serif; line-height: 1.3; }
 
 main { margin: auto; max-width: 70ch; padding: 2ch; }
 
@@ -9,6 +9,12 @@ a:hover { text-decoration: underline; }
 ul { list-style-type: none; padding: 1rem 0; }
 
 li { margin-bottom: .5rem; }
+
+.title { color: #333; }
+
+.date { opacity: .4; text-align: right; display: inherit; }
+
+.post { display: flex; justify-content: space-between; }
 
 pre { overflow: scroll; background-color: #f3f3f3; padding: 1.5rem; }
 
