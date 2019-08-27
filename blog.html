@@ -1,12 +1,11 @@
 ---
-title: Blog
+title: blog
 ---
-<h1>Don't judge a book by its cover, mkay?</h1>
 <ul>
   {% for post in site.posts %}
     <li>
       <h4>
-        <small class="color-light font-light">{{ post.date | date_to_string }}</small>
+        <small>{{ post.date | date_to_string }}</small>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </h4>
       <p>{{ post.excerpt }}</p>

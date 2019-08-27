@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss",
+		"_sass/text.scss",
+		"_sass/code.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n@import \"text\";\n@import \"code\";\n",
+		"",
+		"",
+		"pre {\n  overflow: scroll;\n  background-color: #f3f3f3;\n  padding: 1.5rem;\n}\n\ncode {\n  font-size: .8rem;\n  line-height: 1;\n}\n"
+	],
+	"names": [],
+	"mappings": "AGAA,AAAA,GAAG,CAAC,EACF,QAAQ,EAAE,MAAM,EAChB,gBAAgB,EAAE,OAAO,EACzB,OAAO,EAAE,MAAM,GAChB;;AAED,AAAA,IAAI,CAAC,EACH,SAAS,EAAE,KAAK,EAChB,WAAW,EAAE,CAAC,GACf"
+}
