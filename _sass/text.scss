@@ -1,14 +1,21 @@
-.title {
+.base-color {
   color: #333;
 }
 
-.date {
-  opacity: .4;
+.align-r {
   text-align: right;
   display: inherit;
 }
 
-.post {
+.dim-color {
+  opacity: .4;
+}
+
+.space-between {
   display: flex;
   justify-content: space-between;
+}
+
+.center {
+  text-align: center;
 }

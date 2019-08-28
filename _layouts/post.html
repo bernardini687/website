@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<span class="date">{{ page.date | date_to_string | downcase }}</span>
-
+<span class="align-r dim-color">{{ page.date | date_to_string | downcase }}</span>
 <article>
-  {{ content }}
+{{ content }}
 </article>
+{% include navigation.html %}

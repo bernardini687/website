@@ -1,10 +1,10 @@
-<nav>
+<nav class="center">
   <ul>
   {% for item in site.data.navigation %}
     {% if page.url != item.link %}
       <li><a href="{{ item.link}}">{{ item.name }}</a></li>
     {% else %}
-      <li>{{ item.name | truncate: 2, '.' }}</li>
+      <li class="dim-color">{{ item.name | truncate: 2, '.' }}</li>
     {% endif %}
   {% endfor %}
   </ul>
