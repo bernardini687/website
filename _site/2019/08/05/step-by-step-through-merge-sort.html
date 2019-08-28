@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    
+      <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+    
   </head>
   <body>
     <main>
@@ -29,10 +32,9 @@
 
       <span class="align-r dim-color">05 aug 2019</span>
 <article>
-<p>Hello friend. Having trouble puzzling out <strong>merge sort</strong>? Me too, but together we can do it!</p>
+<p>hello friend. having trouble puzzling out merge sort? me too, but together we can do it!</p>
 
-<p>First of all, here’s the algorithm written in Ruby from <a href="https://rosettacode.org/wiki/Sorting_algorithms/Merge_sort#Ruby">rosettacode.org</a>:</p>
-
+<p>first of all, here’s the algorithm written in ruby from rosettacode.org:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def merge_sort(m)
   return m if m.length &lt;= 1
 
@@ -50,36 +52,34 @@ def merge(left, right)
   result + left + right
 end
 </code></pre></div></div>
+<p>that’s nice. we’ll be much more confident looking at it by the end of this post, trust me.</p>
 
-<p>That’s nice. We’ll be much more confident looking at it by the end of this post, trust me.</p>
-
-<p>Let’s start simple. Merge sort is about sorting elements so here’s the simplest list we can have:</p>
+<p>let’s start simple. merge sort is about sorting elements so here’s the simplest list we can have:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list = []
 </code></pre></div></div>
 
-<p>Okay, let’s sort this!</p>
+<p>okay, let’s sort this!</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>merge_sort [] # =&gt; []
 </code></pre></div></div>
 
-<p>Makes sense. According to the first line in <code class="highlighter-rouge">merge_sort</code> I’m also expecting that an array of size one will be returned as it is.</p>
+<p>makes sense. according to the first line in <code class="highlighter-rouge">merge_sort</code> i’m also expecting that an array of size one will be returned as it is:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>merge_sort [rand(2)] # =&gt; [1]
 </code></pre></div></div>
 
-<p>Okay, arrays with one or zero elements are already sorted, that’s clear. And they’re also the <strong>base case</strong> of our recursive calls to <code class="highlighter-rouge">merge_sort</code>. Lists greater than them will be divided until they’ll be that small, and then feed into another method, <code class="highlighter-rouge">merge</code>, that will handle the actual sorting. We’re going to deal with it.</p>
+<p>okay, arrays with one or zero elements are already sorted, that’s clear. and they’re also the base case of our recursive calls to <code class="highlighter-rouge">merge_sort</code>. lists greater than them will be divided until they’ll be that small, and then feed into another method, <code class="highlighter-rouge">merge</code>, that will handle the actual sorting. we’re going to deal with it.</p>
 
-<p>What if we give ourself a slightly more exciting input? Let’s sort a random list of 2 elements:</p>
+<p>what if we give ourself a slightly more exciting input? let’s sort a random list of 2 elements:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list = (0..9).to_a.sample(2) # =&gt; [5, 3]
 merge_sort(list)             # =&gt; [3, 5]
 </code></pre></div></div>
 
-<p>Let’s figure out what happend now that we passed through that first <strong>guard clause</strong>.</p>
+<p>let’s figure out what happend now that we passed through that first guard clause.</p>
 
-<p><code class="highlighter-rouge">middle</code> is assigned to half the size of the array so that we can conveniently split it in half. We recursively call <code class="highlighter-rouge">merge_sort</code> again, feeding it each half of the original list and assigning the returning value to the variables <code class="highlighter-rouge">left</code> and <code class="highlighter-rouge">right</code>. With those two juicy arrays we feed another method: <code class="highlighter-rouge">merge</code>, which gives us the sorted list we are craving for.</p>
-
+<p><code class="highlighter-rouge">middle</code> is assigned to half the size of the array so that we can conveniently split it in half. we recursively call <code class="highlighter-rouge">merge_sort</code> again, feeding it each half of the original list and assigning the returning value to the variables <code class="highlighter-rouge">left</code> and <code class="highlighter-rouge">right</code>. with those two juicy arrays we feed another method: <code class="highlighter-rouge">merge</code>, which gives us the sorted list we are craving for.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list                      # =&gt; [5, 3]
 middle = list.size / 2    # =&gt; 1
 
@@ -91,11 +91,9 @@ right = merge_sort(rhalf) # =&gt; [3]
 
 merge(left, right)        # =&gt; [3, 5]
 </code></pre></div></div>
+<p>interesting. so now, what’s <code class="highlighter-rouge">merge</code> doing? let’s see, it first assigns an empty array to <code class="highlighter-rouge">result</code>, pushing inside the return value of a ternary operator, until one of the given argument becomes empty.</p>
 
-<p>Interesting. So now, what’s <code class="highlighter-rouge">merge</code> doing? Let’s see, it first assigns an empty array to <code class="highlighter-rouge">result</code>, pushing inside the return value of a ternary operator, until one of the given argument becomes empty.</p>
-
-<p>So, if the first element of <code class="highlighter-rouge">left</code> (5) is less-than-or-equal-to the first element of <code class="highlighter-rouge">right</code> (3), we call <code class="highlighter-rouge">#shift</code> on it and push the first element of that array in <code class="highlighter-rouge">result</code>. Of course 5 is not less-than-or-equal-to 3 so we shift on <code class="highlighter-rouge">right</code>, which now becomes empty (remember that <code class="highlighter-rouge">#shift</code> removes the first element of the array it’s called upon) and thus breaking from the loop:</p>
-
+<p>so, if the first element of <code class="highlighter-rouge">left</code> (5) is less-than-or-equal-to the first element of <code class="highlighter-rouge">right</code> (3), we call <code class="highlighter-rouge">#shift</code> on it and push the first element of that array in <code class="highlighter-rouge">result</code>. of course 5 is not less-than-or-equal-to 3 so we shift on <code class="highlighter-rouge">right</code>, which now becomes empty (remember that <code class="highlighter-rouge">#shift</code> removes the first element of the array it’s called upon) and thus breaking from the loop:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>result &lt;&lt; (left.first &lt;= right.first ? left.shift : right.shift)
 result                # =&gt; [3]
 
@@ -105,35 +103,30 @@ right                 # =&gt; []
 result + left + right # =&gt; [3, 5]
 # [3]  + [5]  + []
 </code></pre></div></div>
+<p>we have all the basic elements now to understand more lengthy calls to <code class="highlighter-rouge">merge_sort</code>. let’s break down with some pseudopseudocode what would happen with a list of 3 elements:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sort [5, 4, 3]
+  split [5, 4, 3] into [5] and [4, 3]
+  we know how 1 element lists get sorted:
+  sort [5] returns [5]
 
-<p>We have all the basic elements now to understand more lengthy calls to <code class="highlighter-rouge">merge_sort</code>. Let’s break down with some <strong>pseudopseudocode</strong> what would happen with a list of 3 elements:</p>
+  we also know how a list of 2 elements gets sorted:
+  sort [4, 3]
+    split [4, 3] into [4] and [3]
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sort [5, 4, 3]
-  Split [5, 4, 3] into [5] and [4, 3]
+    sort [4] returns [4]
+    sort [3] returns [3]
 
-  We know how 1 element lists get sorted:
-  Sort [5] returns [5]
-
-  We also know how a list of 2 elements gets sorted:
-  Sort [4, 3]
-    Split [4, 3] into [4] and [3]
-
-    Sort [4] returns [4]
-    Sort [3] returns [3]
-
-    Merge [4] and [3]
+    merge [4] and [3]
       4 comes after 3 so shift 3 and have [3]
-      Nothing left to compare 4 with so let's add what remains and have [3, 4]
+      nothing left to compare 4 with so let's add what remains and have [3, 4]
 
-    We still have [5] hanging around so:
-    Merge [5] and [3, 4]
+    we still have [5] hanging around so:
+    merge [5] and [3, 4]
       5 comes after 3 so shift 3 and have [3]
       5 comes after 4 so shif 4 and have [3, 4]
-      Nothing left to compare 5 with so let's add what remains and have [3, 4, 5]
+      nothing left to compare 5 with so let's add what remains and have [3, 4, 5]
 </code></pre></div></div>
-
-<p>Or, more schematically:</p>
-
+<p>or, more schematically:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[5, 3, 4] -&gt; merge_sort
 
 ..[5] &lt;-
@@ -148,9 +141,7 @@ result + left + right # =&gt; [3, 5]
 ..[5], [3, 4] -&gt; merge
 [3, 4, 5] &lt;- 🎉
 </code></pre></div></div>
-
-<p>One last example of what happens with a 4 elements list:</p>
-
+<p>one last example of what happens with a 4 elements list:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[5, 3, 0, 4] -&gt; merge_sort
 
 ..[5, 3] -&gt; merge_sort
@@ -170,8 +161,7 @@ result + left + right # =&gt; [3, 5]
 ..[3, 5], [0, 4] -&gt; merge
 [0, 3, 4, 5] &lt;- 🎉
 </code></pre></div></div>
-
-<p>Hope at least something’s more clear by now. If not, my mistake!</p>
+<p>hope at least something’s more clear by now. if not, my mistake!</p>
 
 </article>
 <nav class="center">

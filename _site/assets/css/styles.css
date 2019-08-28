@@ -24,8 +24,8 @@ li { margin-bottom: .5rem; }
 
 .center { text-align: center; }
 
-pre { overflow: scroll; background-color: #f3f3f3; padding: 1.5rem; }
+pre { overflow: scroll; padding: 1.5rem; }
 
-code { font-size: .8rem; line-height: 1; }
+code { font-family: 'PT Mono', monospace; font-size: .8rem; line-height: 1; }
 
 /*# sourceMappingURL=styles.css.map */
