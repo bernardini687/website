@@ -8,11 +8,13 @@ a { color: #f66; display: block; text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
-ul { list-style-type: none; padding: 1rem 0; margin-top: 0; margin-bottom: 1.5rem; }
+ul { list-style-type: none; padding: 0; margin-top: 0; margin-bottom: 1.5rem; }
 
 ul li:last-child { margin: 0; }
 
 li { margin-bottom: .5rem; }
+
+nav ul { padding: 1rem 0; }
 
 .base-color { color: #333; }
 
