@@ -1,6 +1,10 @@
-- name: tac & ping
+- name: tac&ping
   link: https://tacping.com
-- name: share
-  link:
-- name:
+- name: tinyletter
+  link: https://tinyletter.com/oscarbernardini
+- name: soundcloud
+  link: https://soundcloud.com/essm_music
+- name: bandcamp
+  link: https://essmmusic.bandcamp.com/
+- name: ujo music
   link:
