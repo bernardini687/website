@@ -1,0 +1,7 @@
+<nav class="left">
+  <ul>
+  {% for item in site.data.contacts %}
+    <a href="{{ item.link}}">{{ item.name }}</a>
+  {% endfor %}
+  </ul>
+</nav>
