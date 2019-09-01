@@ -4,7 +4,7 @@
     {% if page.url != item.link %}
       <li><a href="{{ item.link}}">{{ item.name }}</a></li>
     {% else %}
-      <li class="dim-color">{{ item.name | truncate: 2, '.' }}</li>
+      <li class="dim-color">{{ item.name | truncate: 1, '' }}</li>
     {% endif %}
   {% endfor %}
   </ul>

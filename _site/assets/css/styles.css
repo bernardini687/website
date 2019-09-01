@@ -16,7 +16,11 @@ li { margin-bottom: .5rem; }
 
 nav ul { padding: 1rem 0; }
 
-.base-color { color: #333; }
+.technical-color { color: #ff66b2; }
+
+.story-color { color: #ffb266; }
+
+.essay-color { color: #66f; }
 
 .align-r { text-align: right; display: inherit; }
 

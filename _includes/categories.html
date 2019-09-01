@@ -1,0 +1,7 @@
+<nav class="left">
+  <ul>
+  {% for item in site.data.categories %}
+    <li class="{{ item.name }}-color">{{ item.name }}</li>
+  {% endfor %}
+  </ul>
+</nav>

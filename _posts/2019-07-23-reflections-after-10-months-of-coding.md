@@ -1,3 +1,6 @@
+---
+category: story
+---
 10 months ago i was clueless about how to achieve my goals. this is not a pep talk on how to do that. this is just another stranger on the web moulding just a few bytes into a personal story. and it's really because of a story from a stranger on the web that, 10 months ago, my life has changed.
 
 so, rewind to september 2018: the end of my late gap year was approaching. i spent the previous months doing some serious introspection and i realized that my music-making pursuit wasn't actually aligned with my values. naturally, i fell into a mild quarter-century crisis.

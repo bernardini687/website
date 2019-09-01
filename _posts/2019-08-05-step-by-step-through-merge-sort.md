@@ -1,4 +1,7 @@
-hello friend. having trouble puzzling out merge sort? i've been there. here's the algorithm written in ruby from rosettacode.org:
+---
+category: technical
+---
+hello friend. having trouble puzzling out merge sort? let's have a close look at it.<br>here's the algorithm written in ruby from rosettacode.org:
 ```
 def merge_sort(m)
   return m if m.length <= 1

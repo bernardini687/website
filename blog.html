@@ -1,10 +1,13 @@
 ---
 title: blog
 ---
+{% include categories.html %}
 <ul>
 {% for post in site.posts %}
   <li class="space-between">
-    <a href="{{ post.url }}" class="base-color">{{ post.title | downcase }}</a>
+    <a href="{{ post.url }}" class="{{ post.category }}-color">
+      {{ post.title | downcase }}
+    </a>
     <span class="align-r dim-color">{{ post.date | date_to_string | downcase }}</span>
   </li>
 {% endfor %}
