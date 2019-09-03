@@ -1,5 +1,5 @@
 ---
-category: technical
+category: nerdy
 ---
 hello friend. having trouble puzzling out merge sort? let's have a close look at it.<br>here's the algorithm written in ruby from rosettacode.org:
 ```
