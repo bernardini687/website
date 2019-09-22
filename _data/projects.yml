@@ -1,14 +1,17 @@
 - name: tac&ping
   link: https://tacping.com
-  blurb: blurb
+  blurb: a truth-centred metafiction
 - name: tinyletter
   link: https://tinyletter.com/oscarbernardini
-  blurb: blurb
+  blurb: a way of sharing without social media
 - name: soundcloud
   link: https://soundcloud.com/essm_music
-  blurb: blurb
+  blurb: old me doing music
 - name: bandcamp
   link: https://essmmusic.bandcamp.com/
-  blurb: blurb
+  blurb: old me trying to sell music
+- name: bitwise fun
+  link:
+  blurb: TBA
 # - name: ujo music
 #   link:
