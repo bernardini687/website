@@ -1,0 +1,10 @@
+<nav class="left">
+  <ul>
+  {% for project in site.data.projects %}
+    <li class="space-between">
+      <a href="{{ project.link}}">{{ project.name }}</a>
+      <span class="align-r dim-color">{{ project.blurb }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+</nav>
