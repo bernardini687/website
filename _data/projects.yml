@@ -1,3 +1,11 @@
+- name: biglook
+  link: https://biglook.fly.dev
+  blurb: a big walk tiny salon in your browser
+  year: 2026
+- name: moodiest
+  link: https://moodiest.app
+  blurb: a card search tool and api for mood swings
+  year: 2026
 - name: playdate wares
   link: https://wsabi.itch.io
   blurb: me fiddling with the playdate handheld
