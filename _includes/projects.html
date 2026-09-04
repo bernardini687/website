@@ -4,7 +4,7 @@
     <li class="space-between">
       <span class="dated">
         <time class="mono dim-color" datetime="{{ project.year }}">{{ project.year }}</time>
-        <a href="{{ project.link}}">{% if project.dead %}<s>{{ project.name }}</s>{% else %}{{ project.name }}{% endif %}</a>
+        <a href="{{ project.link}}">{% if project.dead %}<s>{{ project.name | escape }}</s>{% else %}{{ project.name | escape }}{% endif %}</a>
       </span>
       <span class="align-r dim-color">{{ project.blurb }}</span>
     </li>
