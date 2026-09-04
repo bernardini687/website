@@ -2,7 +2,7 @@
   <ul>
   {% for project in site.data.projects %}
     <li class="space-between">
-      <a href="{{ project.link}}">{{ project.name }}</a>
+      <a href="{{ project.link}}">{% if project.dead %}<s>{{ project.name }}</s>{% else %}{{ project.name }}{% endif %}</a>
       <span class="align-r dim-color">{{ project.blurb }}</span>
     </li>
   {% endfor %}
